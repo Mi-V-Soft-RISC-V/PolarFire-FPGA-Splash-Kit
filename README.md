@@ -10,7 +10,7 @@ FlashPro Express projects containing pre-generated programming files are also av
 
 To download or clone the repository:
 
-    $ git clone https://github.com/RISCV-on-Microsemi-FPGA/PolarFire-FPGA-Splash-Kit.git
+    $ git clone https://github.com/Mi-V-Soft-RISC-V/PolarFire-FPGA-Splash-Kit.git
 
     $ Running from the zipped sources
     1. Download the zipped sources via the "Code" button using "Download Zip" button
@@ -18,11 +18,11 @@ To download or clone the repository:
 
 
 # Libero Projects
-The Libero_Projects folder contains sample Mi-V Libero designs for Libero v12.6. Libero projects for older Libero releases can be downloaded from their [tags](https://github.com/RISCV-on-Microsemi-FPGA/Future-Avalanche-Board/releases) in this repository.
+The Libero_Projects folder contains sample Mi-V Libero designs for Libero v12.6. Libero projects for older Libero releases can be downloaded from their [tags](https://github.com/Mi-V-Soft-RISC-V/PolarFire-FPGA-Splash-Kit/releases) in this repository.
 
 ## Design Features
 The Libero designs include the following features:
-* A soft RISC-V [processor](https://github.com/RISCV-on-Microsemi-FPGA/CPUs)
+* A soft RISC-V processor
 * A RISC-V debug block allowing on-target debug using SoftConsole
 * The operating frequency of the design is 50MHz
 * Target memory is SRAM (32kB)
