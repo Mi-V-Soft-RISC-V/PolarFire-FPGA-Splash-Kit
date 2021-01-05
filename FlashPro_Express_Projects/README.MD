@@ -9,7 +9,7 @@ The programming files contained under this folder were exported from the designs
  Before running these steps, connect the FPGA board to the computer using FlashPro5 or Embedded FlashPro and power up the board.
 
     1. Open FlashPro Express
-    2. Select Project -> New Job Project from FlashPro Express Job   
+    2. Select Project -> New Job Project from FlashPro Express Job
     3. Browse to the programming Job file (.job) using "Browse ...". The Job files are located
        in the FlashPro_Express_Project/Programming_Files directory
     4. Select the Job file, then select "Open"
@@ -21,7 +21,7 @@ The programming files contained under this folder were exported from the designs
 
 ## Design Features
 The Libero designs include the following features:
-* A soft RISC-V [processor](https://github.com/RISCV-on-Microsemi-FPGA/CPUs)
+* A soft RISC-V processor
 * A RISC-V debug block allowing on-target debug using SoftConsole
 * The operating frequency of the design is 50MHz
 * Target memory is SRAM (32kB)

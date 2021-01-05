@@ -74,7 +74,7 @@ In the examples above the arguments "CFG1" and "CFG1 SYNTHESIZE" were entered. T
 
 ## Design Features
 The Libero designs include the following features:
-* A soft RISC-V [processor](https://github.com/RISCV-on-Microsemi-FPGA/CPUs)
+* A soft RISC-V processor
 * A RISC-V debug block allowing on-target debug using SoftConsole
 * The operating frequency of the design is 50MHz
 * Target memory is SRAM (32kB)
