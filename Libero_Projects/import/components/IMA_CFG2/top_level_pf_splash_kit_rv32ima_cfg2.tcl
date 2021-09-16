@@ -176,7 +176,7 @@ sd_instantiate_component -sd_name ${sd_name} -component_name {PF_SRAM_0} -instan
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TCK_0" "MIV_RV32IMA_L1_AXI_0:TCK" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TDI_0" "MIV_RV32IMA_L1_AXI_0:TDI" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TMS_0" "MIV_RV32IMA_L1_AXI_0:TMS" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TRSTB_0" "MIV_RV32IMA_L1_AXI_0:TRST" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TRST_0" "MIV_RV32IMA_L1_AXI_0:TRST" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_SRAM_0:HRESETN" "CoreTimer_1:PRESETn" "COREAHBTOAPB3_0:HRESETN" "CoreGPIO_OUT:PRESETN" "CoreAHBL_0:HRESETN" "CoreTimer_0:PRESETn" "CoreUARTapb_0:PRESETN" "CoreGPIO_IN:PRESETN" "CoreAXITOAHBL_0:HRESETN" "CoreAXITOAHBL_0:ARESETN" "MIV_RV32IMA_L1_AXI_0:RESETN" "CoreAXITOAHBL_1:ARESETN" "CoreAXITOAHBL_1:HRESETN" "CoreRESET_PF_0:FABRIC_RESET_N" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreTimer_0:TIMINT" "MIV_RV32IMA_L1_AXI_0:IRQ[29]" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreTimer_1:TIMINT" "MIV_RV32IMA_L1_AXI_0:IRQ[30]" }
