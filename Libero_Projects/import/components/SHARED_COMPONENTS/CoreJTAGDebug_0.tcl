@@ -1,6 +1,6 @@
 # Exporting core CoreJTAGDebug_0 to TCL
 # Exporting Create design command for core CoreJTAGDebug_0
-create_and_configure_core -core_vlnv {Actel:DirectCore:COREJTAGDEBUG:3.1.100} -component_name {CoreJTAGDebug_0} -params {\
+create_and_configure_core -core_vlnv {Actel:DirectCore:COREJTAGDEBUG:4.0.100} -component_name {CoreJTAGDebug_0} -params {\
 "IR_CODE_TGT_0:0x55"  \
 "IR_CODE_TGT_1:0x56"  \
 "IR_CODE_TGT_2:0x57"  \
@@ -19,20 +19,21 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREJTAGDEBUG:3.1.100} -c
 "IR_CODE_TGT_15:0x64"  \
 "NUM_DEBUG_TGTS:1"  \
 "TGT_ACTIVE_HIGH_RESET_0:false"  \
-"TGT_ACTIVE_HIGH_RESET_1:true"  \
-"TGT_ACTIVE_HIGH_RESET_2:true"  \
-"TGT_ACTIVE_HIGH_RESET_3:true"  \
-"TGT_ACTIVE_HIGH_RESET_4:true"  \
-"TGT_ACTIVE_HIGH_RESET_5:true"  \
-"TGT_ACTIVE_HIGH_RESET_6:true"  \
-"TGT_ACTIVE_HIGH_RESET_7:true"  \
-"TGT_ACTIVE_HIGH_RESET_8:true"  \
-"TGT_ACTIVE_HIGH_RESET_9:true"  \
-"TGT_ACTIVE_HIGH_RESET_10:true"  \
-"TGT_ACTIVE_HIGH_RESET_11:true"  \
-"TGT_ACTIVE_HIGH_RESET_12:true"  \
-"TGT_ACTIVE_HIGH_RESET_13:true"  \
-"TGT_ACTIVE_HIGH_RESET_14:true"  \
-"TGT_ACTIVE_HIGH_RESET_15:true"  \
-"UJTAG_BYPASS:false"   }
+"TGT_ACTIVE_HIGH_RESET_1:false"  \
+"TGT_ACTIVE_HIGH_RESET_2:false"  \
+"TGT_ACTIVE_HIGH_RESET_3:false"  \
+"TGT_ACTIVE_HIGH_RESET_4:false"  \
+"TGT_ACTIVE_HIGH_RESET_5:false"  \
+"TGT_ACTIVE_HIGH_RESET_6:false"  \
+"TGT_ACTIVE_HIGH_RESET_7:false"  \
+"TGT_ACTIVE_HIGH_RESET_8:false"  \
+"TGT_ACTIVE_HIGH_RESET_9:false"  \
+"TGT_ACTIVE_HIGH_RESET_10:false"  \
+"TGT_ACTIVE_HIGH_RESET_11:false"  \
+"TGT_ACTIVE_HIGH_RESET_12:false"  \
+"TGT_ACTIVE_HIGH_RESET_13:false"  \
+"TGT_ACTIVE_HIGH_RESET_14:false"  \
+"TGT_ACTIVE_HIGH_RESET_15:false"  \
+"UJTAG_BYPASS:false"  \
+"UJTAG_SEC_EN:false"   }
 # Exporting core CoreJTAGDebug_0 to TCL done
