@@ -1,0 +1,178 @@
+# Microsemi I/O Physical Design Constraints file
+
+# User I/O Constraints file 
+
+# Version: PolarFire v2.0 12.200.0.20
+
+# Family: PolarFire , Die: MPF300T_ES , Splash Kit, Package: FCG484
+
+# Date generated: Mon Nov 27 12:17:15 2017 
+
+# 
+# User Locked I/O Bank Settings
+# 
+
+# 
+# Unlocked I/O Bank Settings
+# The I/O Bank Settings can be locked by directly editing this file
+# or by making changes in the I/O Attribute Editor
+# 
+
+# 
+# User Locked I/O settings
+# 
+
+
+# -- User PushButtons I/O -- #
+
+
+set_io -port_name {SW_3}  \
+    -pin_name L6                \
+    -fixed true                 \
+    -DIRECTION INPUT
+
+set_io -port_name {SW_4}  \
+    -pin_name M7                \
+    -fixed true                 \
+    -DIRECTION INPUT
+
+set_io -port_name USER_RST  \
+    -pin_name N4           \
+    -fixed true             \
+    -DIRECTION INPUT
+
+
+# -- LEDs I/O --#
+
+set_io -port_name {LED_1}  \
+    -pin_name P7                 \
+    -fixed true                  \
+    -DIRECTION OUTPUT
+
+set_io -port_name {LED_2}  \
+    -pin_name P8                 \
+    -fixed true                  \
+    -DIRECTION OUTPUT
+
+set_io -port_name {LED_3}  \
+    -pin_name N7                 \
+    -fixed true                  \
+    -DIRECTION OUTPUT
+
+set_io -port_name {LED_4}  \
+    -pin_name N8                 \
+    -fixed true                  \
+    -DIRECTION OUTPUT
+
+
+# -- UART RX/TX -- #
+
+set_io -port_name RX  \
+    -pin_name R5     \
+    -fixed true       \
+    -DIRECTION INPUT
+
+set_io -port_name TX   \
+    -pin_name R4      \
+    -fixed true        \
+    -DIRECTION OUTPUT
+
+
+# 
+# Dedicated Peripheral I/O Settings
+# 
+
+
+# 
+# Unlocked I/O settings
+# The I/Os in this section are unplaced or placed but are not locked
+# the other listed attributes have been applied
+# 
+
+
+#
+#Ports using Dedicated Pins
+
+#
+
+set_io -port_name TCK  \
+    -pin_name F8       \
+    -DIRECTION INPUT
+
+set_io -port_name TDI  \
+    -pin_name G8       \
+    -DIRECTION INPUT
+
+set_io -port_name TDO  \
+    -pin_name F6       \
+    -DIRECTION OUTPUT
+
+set_io -port_name TMS  \
+    -pin_name F7       \
+    -DIRECTION INPUT
+
+set_io -port_name TRSTB  \
+    -pin_name G7         \
+    -DIRECTION INPUT
+
+
+# Additional GPIOs IN
+
+# SW3 = L6 on the board
+# SW4 = M7 on the board
+
+# set_io -port_name {GPIO_IN[0]}  \
+    # -pin_name L3                \
+    # -fixed true                 \
+    # -DIRECTION INPUT
+
+# set_io -port_name {GPIO_IN[1]}  \
+    # -pin_name M4                \
+    # -fixed true                 \
+    # -DIRECTION INPUT
+
+# set_io -port_name {GPIO_IN[2]}  \
+    # -pin_name J6                \
+    # -fixed true                 \
+    # -DIRECTION INPUT
+
+# set_io -port_name {GPIO_IN[3]}  \
+    # -pin_name K6                \
+    # -fixed true                 \
+    # -DIRECTION INPUT
+
+
+# set_io -port_name {GPIO_IN[6]}  \
+    # -pin_name K5                \
+    # -fixed true                 \
+    # -DIRECTION INPUT
+
+# set_io -port_name {GPIO_IN[7]}  \
+    # -pin_name K4                \
+    # -fixed true                 \
+    # -DIRECTION INPUT
+	
+	
+# Additional GPIOs OUT
+
+# set_io -port_name {GPIO_OUT[4]}  \
+    # -pin_name N6                 \
+    # -fixed true                  \
+    # -DIRECTION OUTPUT
+
+# set_io -port_name {GPIO_OUT[5]}  \
+    # -pin_name N5                 \
+    # -fixed true                  \
+    # -DIRECTION OUTPUT
+
+# set_io -port_name {GPIO_OUT[6]}  \
+    # -pin_name M8                 \
+    # -fixed true                  \
+    # -DIRECTION OUTPUT
+
+# set_io -port_name {GPIO_OUT[7]}  \
+    # -pin_name M9                 \
+    # -fixed true                  \
+    # -DIRECTION OUTPUT
+
+
