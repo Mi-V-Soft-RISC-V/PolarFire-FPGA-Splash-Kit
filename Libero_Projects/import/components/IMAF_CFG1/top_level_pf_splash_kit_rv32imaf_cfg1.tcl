@@ -1,6 +1,7 @@
-#PolarFire Splash Kit ES = MPF300T_ES-1FCG484I
+#Hardware     : PolarFire Splash Kit (rev1 or rev2)
+#MIV Cores    : MIV_RV32IMAF_L1_AHB
+#
 #Libero's TCL top level script
-# Core: MIV_RV32IMAF_L1_AHB
 #
 #This Tcl file sources other Tcl files to build the design(on which recursive export is run) in a bottom-up fashion
 
