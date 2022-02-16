@@ -1,5 +1,5 @@
 # PolarFire FPGA Splash-Kit Mi-V Sample FPGA Designs
-This folder contains Tcl scripts that build Libero SoC v2021.1 design projects for the PolarFire FPGA Splash-Kit. These scripts are executed in Libero SoC to generate the sample designs. All cores boot from memory at 0x8000_0000.
+This folder contains Tcl scripts that build Libero SoC v2021.2 design projects for the PolarFire FPGA Splash-Kit. These scripts are executed in Libero SoC to generate the sample designs. All cores boot from memory at 0x8000_0000.
 
 
 #### PF_Splash_Kit_ES_MIV_RV32IMA_BaseDesign (or ES equivalent)
@@ -74,7 +74,7 @@ In the examples above the arguments "CFG1" and "CFG1 SYNTHESIZE" were entered. T
 
 ## Design Features
 The Libero designs include the following features:
-* A soft RISC-V [processor](https://github.com/RISCV-on-Microsemi-FPGA/CPUs)
+* A soft RISC-V processor
 * A RISC-V debug block allowing on-target debug using SoftConsole
 * The operating frequency of the design is 50MHz
 * Target memory is SRAM (32kB)

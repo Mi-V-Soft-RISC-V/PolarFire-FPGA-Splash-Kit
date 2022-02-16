@@ -142,7 +142,7 @@ sd_instantiate_component -sd_name ${sd_name} -component_name {PF_OSC_0} -instanc
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32_CFG3_0:JTAG_TCK" "CoreJTAGDebug_0:TGT_TCK_0" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32_CFG3_0:JTAG_TDI" "CoreJTAGDebug_0:TGT_TDI_0" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32_CFG3_0:JTAG_TMS" "CoreJTAGDebug_0:TGT_TMS_0" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32_CFG3_0:JTAG_TRSTN" "CoreJTAGDebug_0:TGT_TRSTB_0" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32_CFG3_0:JTAG_TRSTN" "CoreJTAGDebug_0:TGT_TRSTN_0" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32_CFG3_0:RESETN" "CoreGPIO_IN:PRESETN" "CoreTimer_0:PRESETn" "CoreTimer_1:PRESETn" "CoreUARTapb_0:PRESETN" "CoreGPIO_OUT:PRESETN" "CoreRESET_PF_0:FABRIC_RESET_N" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreTimer_0:TIMINT" "MIV_RV32_CFG3_0:MSYS_EI" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32_CFG3_0:EXT_IRQ" "CoreTimer_1:TIMINT" }
