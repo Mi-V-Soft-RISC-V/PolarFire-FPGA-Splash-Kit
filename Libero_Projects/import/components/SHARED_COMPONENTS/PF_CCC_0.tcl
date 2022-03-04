@@ -1,6 +1,6 @@
 # Exporting core PF_CCC_0 to TCL
 # Exporting Create design command for core PF_CCC_0
-create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.100} -component_name {PF_CCC_0} -params {\
+create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:*} -download_core -component_name {PF_CCC_0} -params {\
 "DLL_CLK_0_BANKCLK_EN:false"  \
 "DLL_CLK_0_DEDICATED_EN:false"  \
 "DLL_CLK_0_FABCLK_EN:false"  \
