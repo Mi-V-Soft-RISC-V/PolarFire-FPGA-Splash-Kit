@@ -1,4 +1,4 @@
-#Hardware     : PolarFire Splash Kit (rev1 or rev2)
+#Hardware     : Arrow Everest Board (rev A or rev B)
 #MIV Cores    : MIV_RV32IMA_L1_AXI
 #
 #Libero's TCL top level script
@@ -105,7 +105,6 @@ sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CoreRESET_PF_0:BANK_
 sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CoreRESET_PF_0:BANK_y_VDDI_STATUS} -value {VCC}
 sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CoreRESET_PF_0:SS_BUSY} -value {GND}
 sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CoreRESET_PF_0:FF_US_RESTORE} -value {GND}
-sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CoreRESET_PF_0:FPGA_POR_N} -value {GND}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {CoreRESET_PF_0:PLL_POWERDOWN_B}
 
 
@@ -148,7 +147,6 @@ sd_instantiate_component -sd_name ${sd_name} -component_name {PF_CCC_0} -instanc
 
 # Add PF_INIT_MONITOR_0 instance
 sd_instantiate_component -sd_name ${sd_name} -component_name {PF_INIT_MONITOR_0} -instance_name {PF_INIT_MONITOR_0}
-sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:FABRIC_POR_N}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:PCIE_INIT_DONE}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:USRAM_INIT_DONE}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:SRAM_INIT_DONE}
@@ -194,6 +192,7 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TMS" "TMS" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TRSTB" "TRSTB" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreUARTapb_0:TX" "TX" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"USER_RST" "CoreRESET_PF_0:EXT_RST_N" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_INIT_MONITOR_0:FABRIC_POR_N" "CoreRESET_PF_0:FPGA_POR_N"}
 
 # Add bus net connections
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreGPIO_IN:GPIO_IN[0]" "SW_3" }
@@ -202,6 +201,7 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreGPIO_OUT:GPIO_OUT[0]" "LED_
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreGPIO_OUT:GPIO_OUT[1]" "LED_2" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreGPIO_OUT:GPIO_OUT[2]" "LED_3" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreGPIO_OUT:GPIO_OUT[3]" "LED_4" }
+
 
 # Add bus interface net connections
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAHBL_0:AHBmslave7" "COREAHBTOAPB3_0:AHBslave" }
@@ -219,6 +219,8 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AXI_0:MMIO_MST_A
 
 # Re-enable auto promotion of pins of type 'pad'
 auto_promote_pad_pins -promote_all 1
+# Re-arrange SmartDesign layout
+sd_reset_layout -sd_name ${sd_name}
 # Save the smartDesign
 save_smartdesign -sd_name ${sd_name}
 # Generate SmartDesign BaseDesign

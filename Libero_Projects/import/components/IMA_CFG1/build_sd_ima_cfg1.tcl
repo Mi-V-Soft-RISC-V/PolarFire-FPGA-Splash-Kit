@@ -1,5 +1,5 @@
-#Hardware     : PolarFire Splash Kit (rev1 or rev2)
-#MIV Cores    : MIV_RV32IMAF_L1_AHB
+#Hardware     : Arrow Everest Board (rev A or rev B)
+#MIV Cores    : MIV_RV32IMA_L1_AHB
 #
 #Libero's TCL top level script
 #
@@ -16,7 +16,7 @@ source ./import/components/SHARED_COMPONENTS/CoreRESET_PF_0.tcl
 source ./import/components/SHARED_COMPONENTS/CoreTimer_0.tcl 
 source ./import/components/SHARED_COMPONENTS/CoreTimer_1.tcl 
 source ./import/components/SHARED_COMPONENTS/CoreUARTapb_0.tcl 
-source ./import/components/SHARED_COMPONENTS/MIV_RV32IMAF_L1_AHB_0.tcl 
+source ./import/components/SHARED_COMPONENTS/MIV_RV32IMA_L1_AHB_0.tcl 
 source ./import/components/SHARED_COMPONENTS/PF_CCC_0.tcl 
 source ./import/components/SHARED_COMPONENTS/PF_INIT_MONITOR_0.tcl 
 source ./import/components/SHARED_COMPONENTS/PF_OSC_0.tcl 
@@ -93,7 +93,6 @@ sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CoreRESET_PF_0:BANK_
 sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CoreRESET_PF_0:BANK_y_VDDI_STATUS} -value {VCC}
 sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CoreRESET_PF_0:SS_BUSY} -value {GND}
 sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CoreRESET_PF_0:FF_US_RESTORE} -value {GND}
-sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CoreRESET_PF_0:FPGA_POR_N} -value {GND}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {CoreRESET_PF_0:PLL_POWERDOWN_B}
 
 
@@ -118,16 +117,16 @@ sd_mark_pins_unused -sd_name ${sd_name} -pin_names {CoreUARTapb_0:FRAMING_ERR}
 
 
 
-# Add MIV_RV32IMAF_L1_AHB_0 instance
-sd_instantiate_component -sd_name ${sd_name} -component_name {MIV_RV32IMAF_L1_AHB_0} -instance_name {MIV_RV32IMAF_L1_AHB_0}
-sd_create_pin_slices -sd_name ${sd_name} -pin_name {MIV_RV32IMAF_L1_AHB_0:IRQ} -pin_slices {[28:0]}
-sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {MIV_RV32IMAF_L1_AHB_0:IRQ[28:0]} -value {GND}
-sd_create_pin_slices -sd_name ${sd_name} -pin_name {MIV_RV32IMAF_L1_AHB_0:IRQ} -pin_slices {[29]}
-sd_create_pin_slices -sd_name ${sd_name} -pin_name {MIV_RV32IMAF_L1_AHB_0:IRQ} -pin_slices {[30]}
-sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MIV_RV32IMAF_L1_AHB_0:AHB_MST_MEM_HSEL}
-sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MIV_RV32IMAF_L1_AHB_0:AHB_MST_MMIO_HSEL}
-sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MIV_RV32IMAF_L1_AHB_0:DRV_TDO}
-sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MIV_RV32IMAF_L1_AHB_0:EXT_RESETN}
+# Add MIV_RV32IMA_L1_AHB_0 instance
+sd_instantiate_component -sd_name ${sd_name} -component_name {MIV_RV32IMA_L1_AHB_0} -instance_name {MIV_RV32IMA_L1_AHB_0}
+sd_create_pin_slices -sd_name ${sd_name} -pin_name {MIV_RV32IMA_L1_AHB_0:IRQ} -pin_slices {[28:0]}
+sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {MIV_RV32IMA_L1_AHB_0:IRQ[28:0]} -value {GND}
+sd_create_pin_slices -sd_name ${sd_name} -pin_name {MIV_RV32IMA_L1_AHB_0:IRQ} -pin_slices {[29]}
+sd_create_pin_slices -sd_name ${sd_name} -pin_name {MIV_RV32IMA_L1_AHB_0:IRQ} -pin_slices {[30]}
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MIV_RV32IMA_L1_AHB_0:AHB_MST_MEM_HSEL}
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MIV_RV32IMA_L1_AHB_0:AHB_MST_MMIO_HSEL}
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MIV_RV32IMA_L1_AHB_0:EXT_RESETN}
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MIV_RV32IMA_L1_AHB_0:DRV_TDO}
 
 
 
@@ -138,7 +137,6 @@ sd_instantiate_component -sd_name ${sd_name} -component_name {PF_CCC_0} -instanc
 
 # Add PF_INIT_MONITOR_0 instance
 sd_instantiate_component -sd_name ${sd_name} -component_name {PF_INIT_MONITOR_0} -instance_name {PF_INIT_MONITOR_0}
-sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:FABRIC_POR_N}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:PCIE_INIT_DONE}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:USRAM_INIT_DONE}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:SRAM_INIT_DONE}
@@ -164,26 +162,27 @@ sd_instantiate_component -sd_name ${sd_name} -component_name {PF_SRAM_0} -instan
 
 
 # Add scalar net connections
-sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMAF_L1_AHB_0:TCK" "CoreJTAGDebug_1:TGT_TCK_0" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMAF_L1_AHB_0:TDI" "CoreJTAGDebug_1:TGT_TDI_0" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMAF_L1_AHB_0:TMS" "CoreJTAGDebug_1:TGT_TMS_0" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMAF_L1_AHB_0:TRST" "CoreJTAGDebug_1:TGT_TRST_0" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"COREAHBTOAPB3_0:HRESETN" "CoreTimer_1:PRESETn" "MIV_RV32IMAF_L1_AHB_0:RESETN" "PF_SRAM_0:HRESETN" "CoreGPIO_IN:PRESETN" "CoreGPIO_OUT:PRESETN" "CoreAHBL_0:HRESETN" "CoreTimer_0:PRESETn" "CoreUARTapb_0:PRESETN" "CoreRESET_PF_0:FABRIC_RESET_N" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMAF_L1_AHB_0:IRQ[29]" "CoreTimer_0:TIMINT" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreTimer_1:TIMINT" "MIV_RV32IMAF_L1_AHB_0:IRQ[30]" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMAF_L1_AHB_0:TDO" "CoreJTAGDebug_1:TGT_TDO_0" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"COREAHBTOAPB3_0:HCLK" "PF_CCC_0:OUT0_FABCLK_0" "CoreTimer_1:PCLK" "MIV_RV32IMAF_L1_AHB_0:CLK" "PF_SRAM_0:HCLK" "CoreUARTapb_0:PCLK" "CoreGPIO_IN:PCLK" "CoreGPIO_OUT:PCLK" "CoreAHBL_0:HCLK" "CoreTimer_0:PCLK" "CoreRESET_PF_0:CLK" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TCK_0" "MIV_RV32IMA_L1_AHB_0:TCK" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TDI_0" "MIV_RV32IMA_L1_AHB_0:TDI" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TMS_0" "MIV_RV32IMA_L1_AHB_0:TMS" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TRST_0" "MIV_RV32IMA_L1_AHB_0:TRST" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreTimer_1:PRESETn" "PF_SRAM_0:HRESETN" "CoreGPIO_OUT:PRESETN" "CoreUARTapb_0:PRESETN" "CoreAHBL_0:HRESETN" "CoreGPIO_IN:PRESETN" "COREAHBTOAPB3_0:HRESETN" "CoreTimer_0:PRESETn" "MIV_RV32IMA_L1_AHB_0:RESETN" "CoreRESET_PF_0:FABRIC_RESET_N" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AHB_0:IRQ[29]" "CoreTimer_0:TIMINT" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreTimer_1:TIMINT" "MIV_RV32IMA_L1_AHB_0:IRQ[30]" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TGT_TDO_0" "MIV_RV32IMA_L1_AHB_0:TDO" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_CCC_0:OUT0_FABCLK_0" "CoreTimer_1:PCLK" "PF_SRAM_0:HCLK" "CoreGPIO_OUT:PCLK" "CoreUARTapb_0:PCLK" "CoreAHBL_0:HCLK" "CoreGPIO_IN:PCLK" "COREAHBTOAPB3_0:HCLK" "CoreTimer_0:PCLK" "MIV_RV32IMA_L1_AHB_0:CLK" "CoreRESET_PF_0:CLK" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_CCC_0:PLL_LOCK_0" "CoreRESET_PF_0:PLL_LOCK" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_INIT_MONITOR_0:DEVICE_INIT_DONE" "CoreRESET_PF_0:INIT_DONE" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_OSC_0:RCOSC_160MHZ_GL" "PF_CCC_0:REF_CLK_0" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_CCC_0:REF_CLK_0" "PF_OSC_0:RCOSC_160MHZ_GL" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreUARTapb_0:RX" "RX" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"TCK" "CoreJTAGDebug_1:TCK" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TCK" "TCK" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TDI" "TDI" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TDO" "TDO" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TMS" "TMS" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"TRSTB" "CoreJTAGDebug_1:TRSTB" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreJTAGDebug_1:TRSTB" "TRSTB" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreUARTapb_0:TX" "TX" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreRESET_PF_0:EXT_RST_N" "USER_RST" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"USER_RST" "CoreRESET_PF_0:EXT_RST_N" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_INIT_MONITOR_0:FABRIC_POR_N" "CoreRESET_PF_0:FPGA_POR_N"}
 
 # Add bus net connections
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreGPIO_IN:GPIO_IN[0]" "SW_3" }
@@ -193,21 +192,25 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreGPIO_OUT:GPIO_OUT[1]" "LED_
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreGPIO_OUT:GPIO_OUT[2]" "LED_3" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreGPIO_OUT:GPIO_OUT[3]" "LED_4" }
 
+
 # Add bus interface net connections
-sd_connect_pins -sd_name ${sd_name} -pin_names {"COREAHBTOAPB3_0:AHBslave" "CoreAHBL_0:AHBmslave7" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_SRAM_0:AHBSlaveInterface" "CoreAHBL_0:AHBmslave8" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAHBL_0:AHBmslave7" "COREAHBTOAPB3_0:AHBslave" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAHBL_0:AHBmslave8" "PF_SRAM_0:AHBSlaveInterface" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAPB3_0:APB3mmaster" "COREAHBTOAPB3_0:APBmaster" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAPB3_0:APBmslave1" "CoreUARTapb_0:APB_bif" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAPB3_0:APBmslave2" "CoreGPIO_IN:APB_bif" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAPB3_0:APBmslave3" "CoreTimer_0:APBslave" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAPB3_0:APBmslave4" "CoreTimer_1:APBslave" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAPB3_0:APBmslave5" "CoreGPIO_OUT:APB_bif" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMAF_L1_AHB_0:AHB_MST_MEM" "CoreAHBL_0:AHBmmaster1" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CoreAHBL_0:AHBmmaster0" "MIV_RV32IMAF_L1_AHB_0:AHB_MST_MMIO" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AHB_0:AHB_MST_MEM" "CoreAHBL_0:AHBmmaster1" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AHB_0:AHB_MST_MMIO" "CoreAHBL_0:AHBmmaster0" }
 
 # Re-enable auto promotion of pins of type 'pad'
 auto_promote_pad_pins -promote_all 1
+# Re-arrange SmartDesign layout
+sd_reset_layout -sd_name ${sd_name}
 # Save the smartDesign
 save_smartdesign -sd_name ${sd_name}
 # Generate SmartDesign BaseDesign
 generate_component -component_name ${sd_name}
+
