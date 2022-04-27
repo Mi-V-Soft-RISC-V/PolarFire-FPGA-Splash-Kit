@@ -20,7 +20,7 @@ To download or clone the repository:
 
 
 # Libero Projects
-The Libero_Projects folder contains sample Mi-V Libero designs for Libero SoC v2021.3. Libero projects for older Libero releases can be downloaded from their [tags](https://github.com/Mi-V-Soft-RISC-V/PolarFire-FPGA-Splash-Kit/releases) in this repository.
+The Libero_Projects folder contains sample Mi-V Libero designs for Libero SoC v2022.1. Libero projects for older Libero releases can be downloaded from their [tags](https://github.com/Mi-V-Soft-RISC-V/PolarFire-FPGA-Splash-Kit/releases) in this repository.
 
 ## Design Features
 The Libero designs include the following features:
@@ -40,7 +40,7 @@ The FlashPro_Express_Projects folder contains the pre-generated programming file
 # Design Tools
 The following design tools are required.
 
-## Libero SoC v2021.3
+## Libero SoC v2022.1
 [Libero SoC](https://www.microsemi.com/products/fpga-soc/design-resources/design-software/libero-soc#downloads) is Microchip's FPGA design software.
 
 ## FlashPro Express
@@ -48,5 +48,11 @@ The following design tools are required.
 available as a standalone application. Please note, that if Libero SoC is already on your system, you do not need
 the standalone version.
 
+# Software
+
 ## SoftConsole
 [SoftConsole](https://www.microsemi.com/product-directory/design-tools/4879-softconsole) is Microchip’s free software development environment facilitating the rapid development of bare-metal and RTOS based C/C++ software for Microchip CPU and SoC based FPGAs. It provides development and debug support for all Microchip SoC FPGAs and 32-bit soft IP CPUs. SoftConsole can be downloaded.
+
+## Mi-V Soft processor Bare Metal Examples
+A [Firmware](https://github.com/Mi-V-Soft-RISC-V/miv-rv32-bare-metal-examples)
+repository that provides bare metal embedded software example projects built with Microchip's SoftConsole IDE.
