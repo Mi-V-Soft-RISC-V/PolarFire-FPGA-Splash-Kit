@@ -43,9 +43,9 @@ create_and_configure_core -core_vlnv {Microsemi:MiV:MIV_RV32:3.0.100} -component
 "TAS_END_ADDR_1:0x4000"  \
 "TAS_START_ADDR_0:0x0"  \
 "TAS_START_ADDR_1:0x4000"  \
-"TCM_END_ADDR_0:0x3fff"  \
+"TCM_END_ADDR_0:0x7fff"  \
 "TCM_END_ADDR_1:0x4000"  \
-"TCM_PRESENT:false"  \
+"TCM_PRESENT:true"  \
 "TCM_START_ADDR_0:0x0"  \
 "TCM_START_ADDR_1:0x4000"  \
 "TCM_TAS_PRESENT:false"  \
