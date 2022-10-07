@@ -54,5 +54,5 @@ the standalone version.
 [SoftConsole](https://www.microsemi.com/product-directory/design-tools/4879-softconsole) is Microchip’s free software development environment facilitating the rapid development of bare-metal and RTOS based C/C++ software for Microchip CPU and SoC based FPGAs. It provides development and debug support for all Microchip SoC FPGAs and 32-bit soft IP CPUs. SoftConsole can be downloaded.
 
 ## Mi-V Soft processor Bare Metal Examples
-A [Firmware](https://github.com/Mi-V-Soft-RISC-V/miv-rv32-bare-metal-examples)
+A [Firmware](https://mi-v-ecosystem.github.io/redirects/miv-soft/miv-rv32-bare-metal-examples.md)
 repository that provides bare metal embedded software example projects built with Microchip's SoftConsole IDE.
