@@ -32,7 +32,7 @@ The Libero designs include the following features:
 
 ## Target Hardware
 Details of the PolarFire FPGA Splash-Kit and it's features can be found:
-* [PolarFire-Splash-Kit](https://www.microsemi.com/existing-parts/parts/144001) (MPF300TS_ES)
+* [MPF300-SPLASH-KIT](https://www.microchip.com/en-us/development-tool/MPF300-SPLASH-KIT)
 
 # FlashPro Express
 The FlashPro_Express_Projects folder contains the pre-generated programming files, which can be downloaded directly to the target board using FlashPro Express.
@@ -41,17 +41,17 @@ The FlashPro_Express_Projects folder contains the pre-generated programming file
 The following design tools are required.
 
 ## Libero SoC v2022.2
-[Libero SoC](https://www.microsemi.com/products/fpga-soc/design-resources/design-software/libero-soc#downloads) is Microchip's FPGA design software.
+[Libero SoC](https://www.microchip.com/en-us/products/fpgas-and-plds/fpga-and-soc-design-tools/fpga/libero-software-later-versions#downloads) is Microchip's FPGA design software.
 
 ## FlashPro Express
-[FlashPro Express](http://www.microsemi.com/products/fpga-soc/design-resources/programming/flashpro#software) is Microchip's Programming and debug tool. It is included in the Libero SoC software and is also
+[FlashPro Express](https://www.microchip.com/en-us/products/fpgas-and-plds/fpga-and-soc-design-tools/programming-and-debug/flashpro-and-flashpro-express#software) is Microchip's Programming and debug tool. It is included in the Libero SoC software and is also
 available as a standalone application. Please note, that if Libero SoC is already on your system, you do not need
 the standalone version.
 
 # Software
 
 ## SoftConsole
-[SoftConsole](https://www.microsemi.com/product-directory/design-tools/4879-softconsole) is Microchip’s free software development environment facilitating the rapid development of bare-metal and RTOS based C/C++ software for Microchip CPU and SoC based FPGAs. It provides development and debug support for all Microchip SoC FPGAs and 32-bit soft IP CPUs. SoftConsole can be downloaded.
+[SoftConsole](https://www.microchip.com/en-us/products/fpgas-and-plds/fpga-and-soc-design-tools/soc-fpga/softconsole) is Microchip’s free software development environment facilitating the rapid development of bare-metal and RTOS based C/C++ software for Microchip CPU and SoC based FPGAs. It provides development and debug support for all Microchip SoC FPGAs and 32-bit soft IP CPUs. SoftConsole can be downloaded.
 
 ## Mi-V Soft processor Bare Metal Examples
 A [Firmware](https://mi-v-ecosystem.github.io/redirects/miv-soft/miv-rv32-bare-metal-examples.md)
