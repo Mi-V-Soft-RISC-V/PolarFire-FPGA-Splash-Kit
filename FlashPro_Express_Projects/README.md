@@ -1,6 +1,6 @@
 # PolarFire FPGA Splash-Kit FPGA Programming Files
 
-This folder contains FlashPro Express v2022.2 projects for the PolarFire FPGA Splash-Kit Mi-V sample designs.
+This folder contains FlashPro Express v2023.1 projects for the PolarFire FPGA Splash-Kit Mi-V sample designs.
 
 ## FlashPro Express
 The programming files contained under this folder were exported from the designs in the Libero_Projects folder in this repository. Select the desired programming file (.job) and program your device using FlashPro Express.
