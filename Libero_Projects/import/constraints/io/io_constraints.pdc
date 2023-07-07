@@ -4,7 +4,7 @@
 
 # Version: PolarFire v2.0 12.200.0.20
 
-# Family: PolarFire , Die: MPF300T_ES , Splash Kit, Package: FCG484
+# Family: PolarFire , Die: MPF300T , Splash Kit, Package: FCG484
 
 # Date generated: Mon Nov 27 12:17:15 2017 
 
@@ -22,16 +22,24 @@
 # User Locked I/O settings
 # 
 
+# -- Clock (50MHz) -- #
+# GPIO239PB5/CLKIN_W_2/CCC_SW_CLKIN_W_2/CCC_SW_PLL0_OUT0
 
-# -- User PushButtons I/O -- #
+set_io -port_name {REF_CLK}  \
+	-pin_name H7              	\
+	-fixed true               	\
+	-DIRECTION INPUT
 
+# -- User I/O -- #
 
-set_io -port_name {SW_3}  \
+# Tied to SW_3 on the board
+set_io -port_name {SW_1}  \
     -pin_name L6                \
     -fixed true                 \
     -DIRECTION INPUT
 
-set_io -port_name {SW_4}  \
+# Tied to SW_4 on the board
+set_io -port_name {SW_2}  \
     -pin_name M7                \
     -fixed true                 \
     -DIRECTION INPUT
