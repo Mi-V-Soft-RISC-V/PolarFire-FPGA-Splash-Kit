@@ -20,7 +20,7 @@ To download or clone the repository:
 
 
 # Libero Projects
-The Libero_Projects folder contains [sample Mi-V Libero designs](Libero_Projects) for Libero SoC v2023.1. Libero projects for older Libero releases can be downloaded from their [tags](https://github.com/Mi-V-Soft-RISC-V/PolarFire-FPGA-Splash-Kit/releases) in this repository.
+The Libero_Projects folder contains [sample Mi-V Libero designs](Libero_Projects) for Libero SoC v2023.2. Libero projects for older Libero releases can be downloaded from their [tags](https://github.com/Mi-V-Soft-RISC-V/PolarFire-FPGA-Splash-Kit/releases) in this repository.
 
 ## Design Features
 The Libero designs include the following features:
@@ -40,7 +40,7 @@ The FlashPro_Express_Projects folder contains the pre-generated programming file
 # Design Tools
 The following design tools are required.
 
-## Libero SoC v2023.1
+## Libero SoC v2023.2
 [Libero SoC](https://www.microchip.com/en-us/products/fpgas-and-plds/fpga-and-soc-design-tools/fpga/libero-software-later-versions#downloads) is Microchip's FPGA design software.
 
 ## FlashPro Express
