@@ -1,5 +1,5 @@
 # PolarFire FPGA Splash-Kit Mi-V Sample FPGA Designs
-This folder contains Tcl scripts that build Libero SoC v2023.1 design projects for the PolarFire FPGA Splash-Kit. These scripts are executed in Libero SoC to generate the sample designs. All cores boot from memory at 0x8000_0000.
+This folder contains Tcl scripts that build Libero SoC v2024.1 design projects for the PolarFire FPGA Splash-Kit. These scripts are executed in Libero SoC to generate the sample designs. All cores boot from memory at 0x8000_0000.
 
 ## Notice
 1) Due to an issues found in the MIV_RV32 v3.1.100 with the MTVECs address, it is not recommended to use MIV_RV32 v3.1.100 for any FreeRTOS examples. You may continue to use MIV_RV32 v3.0 with FreeRTOS examples. 
