@@ -1,6 +1,6 @@
 # PolarFire FPGA Splash-Kit FPGA Programming Files
 
-This folder contains FlashPro Express v2023.2 projects for the PolarFire FPGA Splash-Kit Mi-V sample designs.
+This folder contains FlashPro Express v2024.1 projects for the PolarFire FPGA Splash-Kit Mi-V sample designs.
 
 ## Notice
 1) Due to an issue specific to the MIV_RV32 v3.1.100 with the MTVECs address, it is not recommended to use MIV_RV32 v3.1.100 for any FreeRTOS examples. You may use MIV_RV32 v3.0 or the latest MIV_RV32 v3.1.200 with the FreeRTOS examples. 
