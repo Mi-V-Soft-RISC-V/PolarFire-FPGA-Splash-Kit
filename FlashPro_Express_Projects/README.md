@@ -3,9 +3,9 @@
 This folder contains FlashPro Express v2024.1 projects for the PolarFire FPGA Splash-Kit Mi-V sample designs.
 
 ## Notice
-1) Due to an issues found in the MIV_RV32 v3.1.100 with the MTVECs address, it is not recommended to use MIV_RV32 v3.1.100 for any FreeRTOS examples. You may continue to use MIV_RV32 v3.0 with FreeRTOS examples. 
+1) Due to an issue specific to the MIV_RV32 v3.1.100 with the MTVECs address, it is not recommended to use MIV_RV32 v3.1.100 for any FreeRTOS examples. You may use MIV_RV32 v3.0 or the latest MIV_RV32 v3.1.200 with the FreeRTOS examples. 
 
-2) There is also an issue which effects all MIV_RV32 cores, when using fast interrupts where the return address can become corrupted. There software workaround can be applied in the entry.S in MIV_RV32 HAL file as shown below untill the issue is fixed in the IP.
+2) There is also an issue which effects all MIV_RV32 cores up to v3.1.100, when using fast interrupts where the return address can become corrupted. There software workaround can be applied in the entry.S in MIV_RV32 HAL file as shown below until the issue is fixed in the IP.
 
 .macro STORE_CONTEXT
 addi sp, sp, -SP_SHIFT_OFFSET*REGBYTES
