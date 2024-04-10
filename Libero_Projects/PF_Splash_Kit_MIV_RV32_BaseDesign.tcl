@@ -19,7 +19,7 @@ set validConfigs [list "CFG1" "CFG2" "CFG3"]
 set validDesignFlows [list "SYNTHESIZE" "PLACE_AND_ROUTE" "GENERATE_BITSTREAM" "EXPORT_PROGRAMMING_FILE"]
 set validDieTypes [list "PS" "ES" ""]
 set sdName {BaseDesign}
-set exProgramHex "miv-rv32i-systick-blinky.hex"
+set exProgramHex "miv-rv32-coretimer-timer_interrupt.hex"
 
 # Call procedures to validate user arguments
 set config [verify_config $config]

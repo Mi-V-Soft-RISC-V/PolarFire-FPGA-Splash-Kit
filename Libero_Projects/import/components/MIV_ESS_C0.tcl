@@ -2,7 +2,7 @@
 # Family: PolarFire
 # Part Number: MPF300TS-FCG484I
 # Create and Configure the core component MIV_ESS_0
-create_and_configure_core -core_vlnv {Actel:SystemBuilder:MIV_ESS:2.0.100} -component_name {MIV_ESS_C0} -download_core -params {\
+create_and_configure_core -core_vlnv {Actel:SystemBuilder:MIV_ESS:2.0.200} -component_name {MIV_ESS_C0} -download_core -params {\
 "APBSLOT11ENABLE:false" \
 "APBSLOT12ENABLE:false" \
 "APBSLOT13ENABLE:false" \
