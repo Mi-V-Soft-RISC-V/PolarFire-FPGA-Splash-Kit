@@ -1,23 +1,6 @@
 # PolarFire FPGA Splash-Kit Mi-V Sample FPGA Designs
 This folder contains Tcl scripts that build Libero SoC v2024.1 design projects for the PolarFire FPGA Splash-Kit. These scripts are executed in Libero SoC to generate the sample designs. All cores boot from memory at 0x8000_0000.
 
-## Notice
-1) Due to an issue specific to the MIV_RV32 v3.1.100 with the MTVECs address, it is not recommended to use MIV_RV32 v3.1.100 for any FreeRTOS examples. You may use MIV_RV32 v3.0 or the latest MIV_RV32 v3.1.200 with the FreeRTOS examples. 
-
-2) There is also an issue which effects all MIV_RV32 cores up to v3.1.100, when using fast interrupts where the return address can become corrupted. There software workaround can be applied in the entry.S in MIV_RV32 HAL file as shown below until the issue is fixed in the IP.
-
-.macro STORE_CONTEXT
-addi sp, sp, -SP_SHIFT_OFFSET*REGBYTES
-SREG x1, 0 * REGBYTES(sp)
-SREG x1, 0 * REGBYTES(sp) // re-write the return address to workaround
-SREG x2, 1 * REGBYTES(sp)
-SREG x3, 2 * REGBYTES(sp)
-
-Please see the latest MIV_RV32 HAL available [here](https://github.com/Mi-V-Soft-RISC-V/platform/tree/main/miv_rv32_hal).
-
-A new version of the MIV_RV32 will be released to fix both the issues mentioned above.
-
-
 #### PF_Splash_Kit_MIV_RV32_BaseDesign
 
 | Config  | Description|
