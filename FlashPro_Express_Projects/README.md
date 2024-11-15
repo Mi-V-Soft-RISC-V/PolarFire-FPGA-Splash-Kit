@@ -1,6 +1,6 @@
 # PolarFire FPGA Splash-Kit FPGA Programming Files
 
-This folder contains FlashPro Express v2024.1 projects for the PolarFire FPGA Splash-Kit Mi-V sample designs.
+This folder contains FlashPro Express v2024.2 projects for the PolarFire FPGA Splash-Kit Mi-V sample designs.
 
 ## FlashPro Express
 The programming files contained under this folder were exported from the designs in the Libero_Projects folder in this repository. Select the desired programming file (.job) and program your device using FlashPro Express.
@@ -48,14 +48,3 @@ The peripherals in this design are located at the following addresses.
 | MIV_ESS_APBSLOTE_BASE            | 0x7E00_0000   | 0x7EFF_FFFF    |
 | MIV_ESS_APBSLOTF_BASE            | 0x7F00_0000   | 0x7FFF_FFFF    |
 | SRAM/TCM                         | 0x8000_0000   | 0x8000_7FFF    |
-
-
-#### Legacy core based configurations:
-| Peripheral (Standalone)| Address       |
-| ----------------------:|:-------------:|
-| CoreUARTapb            | 0x7000_1000   |
-| CoreGPIO_IN            | 0x7000_2000   |
-| CoreTimer_0            | 0x7000_3000   |
-| CoreTimer_1            | 0x7000_4000   |
-| CoreGPIO_OUT           | 0x7000_5000   |
-| SRAM                   | 0x8000_0000   |
