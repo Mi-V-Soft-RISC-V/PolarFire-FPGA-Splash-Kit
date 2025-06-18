@@ -35,8 +35,9 @@ The FlashPro_Express_Projects folder contains the pre-generated programming file
 # Design Tools
 The following design tools are required.
 
-## Libero SoC v2024.2
-[Libero SoC](https://www.microchip.com/en-us/products/fpgas-and-plds/fpga-and-soc-design-tools/fpga/libero-software-later-versions#downloads) is Microchip's FPGA design software.
+## Libero SoC v2025.1
+[Libero SoC](https://www.microchip.com/en-us/products/fpgas-and-plds/fpga-and-soc-design-tools/fpga/libero-software-later-versions#downloads) is Microchip's FPGA design software. Please note the [Memory Map Generation DRC](https://onlinedocs.microchip.com/oxy/GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B-en-US-15/GUID-0FECE76C-AF5E-461A-A9AF-969F95712EFB.html) feature is downgraded in the Mi-V sample designs.
+
 
 ## FlashPro Express
 [FlashPro Express](https://www.microchip.com/en-us/products/fpgas-and-plds/fpga-and-soc-design-tools/programming-and-debug/flashpro-and-flashpro-express#software) is Microchip's Programming and debug tool. It is included in the Libero SoC software and is also
