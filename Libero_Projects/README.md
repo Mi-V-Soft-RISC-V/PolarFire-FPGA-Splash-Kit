@@ -59,6 +59,7 @@ In the examples above the arguments "CFG1" and "CFG1 SYNTHESIZE PS" were entered
 | PS | Build a base design targeted for 'PS' die |
 | ES | Build a base design targeted for 'ES' die |
 
+Please note: Error messages will be generated if invalid arguments are applied.
 
 ## Design Features
 The Libero designs include the following features:
