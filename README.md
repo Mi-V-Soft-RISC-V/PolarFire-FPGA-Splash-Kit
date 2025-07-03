@@ -15,7 +15,8 @@ To download or clone the repository:
 
 
 # Libero Projects
-The Libero_Projects folder contains [sample Mi-V Libero designs](Libero_Projects) for Libero SoC v2024.1. Libero projects for older Libero releases can be downloaded from their [tags](https://github.com/Mi-V-Soft-RISC-V/PolarFire-FPGA-Splash-Kit/releases) in this repository.
+The Libero_Projects folder contains [sample Mi-V Libero designs](Libero_Projects) for Libero SoC v2025.1. Libero projects for older Libero releases can be downloaded from their [tags](https://github.com/Mi-V-Soft-RISC-V/PolarFire-FPGA-Splash-Kit/releases) in this repository.
+
 
 ## Design Features
 The Libero designs include the following features:
