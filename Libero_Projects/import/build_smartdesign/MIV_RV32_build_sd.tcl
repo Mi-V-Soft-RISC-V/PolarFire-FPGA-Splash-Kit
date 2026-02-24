@@ -1,7 +1,7 @@
 # Libero SmartDesign builder script for PolarFire family hardware platforms
 # This builder is targetted at the following soft-CPU configurations:
 #
-#  MIV_RV32: CFG1 - AHB 
+#  MIV_RV32: CFG1 - AHB
 #  MIV_RV32: CFG2 - AXI4
 #  MIV_RV32: CFG3 - TCM
 #
@@ -13,13 +13,13 @@
 #Sourcing the Tcl files for each of the design's components
 set cjdRstType [expr {$softCpu eq "MIV_RV32" ? "TRSTN" : "TRST"}]
 
-source $scriptDir/import/components/PF_INIT_MONITOR_C0.tcl 
-source $scriptDir/import/components/CORERESET_PF_C0.tcl 
+source $scriptDir/import/components/PF_INIT_MONITOR_C0.tcl
+source $scriptDir/import/components/CORERESET_PF_C0.tcl
 source $scriptDir/import/components/PF_CCC_C0.tcl
-source $scriptDir/import/components/CoreJTAGDebug_${cjdRstType}_C0.tcl 
-source $scriptDir/import/components/CoreTimer_C0.tcl 
-source $scriptDir/import/components/CoreTimer_C1.tcl 
-source $scriptDir/import/components/MIV_ESS_C0.tcl 
+source $scriptDir/import/components/CoreJTAGDebug_${cjdRstType}_C0.tcl
+source $scriptDir/import/components/CoreTimer_C0.tcl
+source $scriptDir/import/components/CoreTimer_C1.tcl
+source $scriptDir/import/components/MIV_ESS_C0.tcl
 source $scriptDir/import/components/${softCpu}_${config}_C0.tcl
 if {$config eq "CFG1"} {source $scriptDir/import/components/PF_SRAM_AHB_C0.tcl }
 if {$config eq "CFG2"} {source $scriptDir/import/components/PF_SRAM_AXI4_C0.tcl}
@@ -93,12 +93,20 @@ sd_mark_pins_unused -sd_name ${sdName} -pin_names {PF_INIT_MONITOR_C0_0:SRAM_INI
 sd_mark_pins_unused -sd_name ${sdName} -pin_names {PF_INIT_MONITOR_C0_0:AUTOCALIB_DONE}
 
 
+# Add passthrough_0 instance
+import_files -hdl_source $scriptDir/import/hdl/passthrough.v
+create_hdl_core -file {hdl/passthrough.v} -module {passthrough} -library {work} -package {}
+sd_instantiate_hdl_core -sd_name ${sd_name} -hdl_core_name {passthrough} -instance_name {passthrough_0}
+sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {passthrough_0:port_in} -value {GND}
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {passthrough_0:port_out}
+
+
 # Add PF_CCC_C0 instance
 sd_instantiate_component -sd_name ${sdName}  -component_name {PF_CCC_C0} -instance_name {PF_CCC_C0_0}
 
 
 # Add Clock Int macro instance
-sd_instantiate_macro -sd_name ${sdName} -macro_name {CLKINT} -instance_name {CLKINT_0} 
+sd_instantiate_macro -sd_name ${sdName} -macro_name {CLKINT} -instance_name {CLKINT_0}
 
 
 # Add CoreTimer_C0 instance
@@ -123,15 +131,15 @@ if {$config eq "CFG2"} {sd_instantiate_component -sd_name ${sdName} -component_n
 
 
 # Add scalar net connections
-sd_connect_pins -sd_name ${sdName} -pin_names {"CLKINT_0:Y" "PF_CCC_C0_0:REF_CLK_0"} 
+sd_connect_pins -sd_name ${sdName} -pin_names {"CLKINT_0:Y" "PF_CCC_C0_0:REF_CLK_0"}
 sd_connect_pins -sd_name ${sdName} -pin_names {"CLKINT_0:A" "REF_CLK"}
 sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "CORERESET_PF_C0_0:CLK"}
 sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:PLL_LOCK_0" "CORERESET_PF_C0_0:PLL_LOCK" }
-sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 ${softCpu}_${config}_C0_0:CLK" 
+sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 ${softCpu}_${config}_C0_0:CLK"
 sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 MIV_ESS_C0_0:PCLK"
 sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 CoreTimer_C0_0:PCLK"
 sd_connect_pins -sd_name ${sdName} -pin_names "PF_CCC_C0_0:OUT0_FABCLK_0 CoreTimer_C1_0:PCLK"
-if {$config eq "CFG1"} {sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "PF_SRAM_AHB_C0_0:HCLK"} 
+if {$config eq "CFG1"} {sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "PF_SRAM_AHB_C0_0:HCLK"}
 						sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:FABRIC_RESET_N" "PF_SRAM_AHB_C0_0:HRESETN"} }
 if {$config eq "CFG2"} {sd_connect_pins -sd_name ${sdName} -pin_names {"PF_CCC_C0_0:OUT0_FABCLK_0" "PF_SRAM_AXI4_C0_0:ACLK"}
 						sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:FABRIC_RESET_N" "PF_SRAM_AXI4_C0_0:ARESETN"} }
@@ -146,7 +154,7 @@ sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:
 sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TDI_0 ${softCpu}_${config}_C0_0:JTAG_TDI"
 sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TDO_0 ${softCpu}_${config}_C0_0:JTAG_TDO"
 sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_TMS_0 ${softCpu}_${config}_C0_0:JTAG_TMS"
-sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_${cjdRstType}_0 ${softCpu}_${config}_C0_0:JTAG_${cjdRstType}" 
+sd_connect_pins -sd_name ${sdName} -pin_names "COREJTAGDEBUG_${cjdRstType}_C0_0:TGT_${cjdRstType}_0 ${softCpu}_${config}_C0_0:JTAG_${cjdRstType}"
 sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:FPGA_POR_N" "PF_INIT_MONITOR_C0_0:FABRIC_POR_N" }
 sd_connect_pins -sd_name ${sdName} -pin_names {"CORERESET_PF_C0_0:INIT_DONE" "PF_INIT_MONITOR_C0_0:DEVICE_INIT_DONE" }
 sd_connect_pins -sd_name ${sdName} -pin_names "${softCpu}_${config}_C0_0:MSYS_EI CoreTimer_C0_0:TIMINT"
