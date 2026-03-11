@@ -1,9 +1,9 @@
-# Exporting Component Description of MIV_ESS_C0 to TCL
+# Exporting Component Description of MIV_ESS_0 to TCL
 # Family: PolarFire
-# Part Number: MPF300TS-1FCG484I
-# Create and Configure the core component MIV_ESS_C0
-create_and_configure_core -core_vlnv {Actel:SystemBuilder:MIV_ESS:2.0.100} -component_name {MIV_ESS_C0} -params {\
-"APBSLOT11ENABLE:true" \
+# Part Number: MPF300TS-FCG484I
+# Create and Configure the core component MIV_ESS_0
+create_and_configure_core -core_vlnv {Actel:SystemBuilder:MIV_ESS:2.0.200} -component_name {MIV_ESS_C0} -download_core -params {\
+"APBSLOT11ENABLE:false" \
 "APBSLOT12ENABLE:false" \
 "APBSLOT13ENABLE:false" \
 "APBSLOT14ENABLE:false" \
@@ -21,7 +21,7 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:MIV_ESS:2.0.100} -comp
 "BOOTLOAD_EN:false" \
 "BOOTLOAD_SOURCE:1" \
 "BUSY_SIGNAL:true" \
-"CFG_CLK:24" \
+"CFG_CLK:7" \
 "CFG_FIFO_DEPTH:32" \
 "CFG_FRAME_SIZE:8" \
 "CFG_MODE:0" \
@@ -189,7 +189,7 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:MIV_ESS:2.0.100} -comp
 "RX_FIFO:0" \
 "RX_LEGACY_MODE:0" \
 "SPI_CLK_RATIO:8" \
-"SPI_EN:true" \
+"SPI_EN:false" \
 "SPI_SRC_ADDR_LOWER:0x0" \
 "SPI_SRC_ADDR_UPPER:0x0" \
 "SS_DESELECT_DURATION:8" \
@@ -205,4 +205,4 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:MIV_ESS:2.0.100} -comp
 "WRITE_MIRROR:false" \
 "WRITE_PORT:1" \
 "uDMA_EN:false" }
-# Exporting Component Description of MIV_ESS_C0 to TCL done
+# Exporting Component Description of MIV_ESS_0 to TCL done

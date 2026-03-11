@@ -1,5 +1,5 @@
 # Configuring PF_SRAM_AHB_C0 component for the design
-create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_SRAM_AHBL_AXI:*} -download_core -component_name {PF_SRAM_AHB_C0} -params \
+create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_SRAM_AHBL_AXI:1.2.111} -component_name {PF_SRAM_AHB_C0} -params \
 "AXI4_AWIDTH:32 \
 AXI4_DWIDTH:32 \
 AXI4_IDWIDTH:8 \
@@ -12,7 +12,7 @@ B_REN_POLARITY:2 \
 CASCADE:1 \
 ECC_OPTIONS:0 \
 FABRIC_INTERFACE_TYPE:0 \
-IMPORT_FILE:hex/$exProgramHex \
+IMPORT_FILE:../import/firmware/$exProgramHex \
 INIT_RAM:T \
 LPM_HINT:0 \
 PIPELINE_OPTIONS:1 \

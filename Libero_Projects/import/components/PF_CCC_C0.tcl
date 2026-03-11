@@ -1,6 +1,8 @@
-# Exporting core PF_CCC_0 to TCL
-# Exporting Create design command for core PF_CCC_0
-create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:*} -download_core -component_name {PF_CCC_C0} -params {\
+# Exporting Component Description of PF_CCC_C0 to TCL
+# Family: PolarFire
+# Part Number: MPF300TS-1FCG484I
+# Create and Configure the core component PF_CCC_C0
+create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.220} -component_name {PF_CCC_C0} -params {\
 "DLL_CLK_0_BANKCLK_EN:false"  \
 "DLL_CLK_0_DEDICATED_EN:false"  \
 "DLL_CLK_0_FABCLK_EN:false"  \
@@ -68,15 +70,15 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:*} -download_core -com
 "GL1_0_BYPASS:0"  \
 "GL1_0_BYPASS_EN:false"  \
 "GL1_0_DEDICATED_USED:false"  \
-"GL1_0_DIV:1"  \
+"GL1_0_DIV:10"  \
 "GL1_0_DIVSTART:0"  \
 "GL1_0_DYNAMIC_PH:false"  \
 "GL1_0_EXPOSE_EN:false"  \
 "GL1_0_FABCLK_GATED_USED:false"  \
 "GL1_0_FABCLK_USED:true"  \
 "GL1_0_FREQ_SEL:false"  \
-"GL1_0_IS_USED:false"  \
-"GL1_0_OUT_FREQ:100"  \
+"GL1_0_IS_USED:true"  \
+"GL1_0_OUT_FREQ:125"  \
 "GL1_0_PHASE_INDEX:0"  \
 "GL1_0_PHASE_SEL:false"  \
 "GL1_0_PLL_PHASE:0"  \
@@ -225,7 +227,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:*} -download_core -com
 "PLL_POSTDIVIDERADDSOFTLOGIC_0:true"  \
 "PLL_REF_CLK_SEL_0:false"  \
 "PLL_REF_CLK_SEL_1:false"  \
-"PLL_REFDIV_0:4"  \
+"PLL_REFDIV_0:1"  \
 "PLL_REFDIV_1:1"  \
 "PLL_RESET_ON_LOCK_0:true"  \
 "PLL_SPREAD_MODE_0:false"  \
@@ -244,4 +246,4 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:*} -download_core -com
 "PLL_SYNC_EN:false"  \
 "PLL_VCO_MODE_0:MIN_JITTER"  \
 "PLL_VCO_MODE_1:MIN_JITTER"   }
-# Exporting core PF_CCC_0 to TCL done
+# Exporting Component Description of PF_CCC_C0 to TCL done

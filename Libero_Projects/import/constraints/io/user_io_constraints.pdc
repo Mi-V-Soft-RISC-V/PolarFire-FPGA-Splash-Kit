@@ -1,0 +1,308 @@
+# Microchip I/O Physical Design Constraints file
+
+# User I/O Constraints file
+
+# Version: 2025.1 2025.1.0.14
+
+# Family: PolarFire , Die: MPF300TS , Package: FCG484
+
+# Date generated: Fri Feb 13 13:08:39 2026
+
+
+#
+# User Locked I/O Bank Settings
+#
+
+
+#
+# Unlocked I/O Bank Settings
+# The I/O Bank Settings can be locked by directly editing this file
+# or by making changes in the I/O Attribute Editor
+#
+
+set_iobank -bank_name Bank4  \
+    -vcci 3.30               \
+    -fixed false             \
+    -update_iostd true
+
+set_iobank -bank_name Bank5  \
+    -vcci 3.30               \
+    -fixed false             \
+    -update_iostd true
+
+
+#
+# User Locked I/O settings
+#
+
+set_io -port_name ADC_D0_N  \
+    -pin_name B17           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D0_P  \
+    -pin_name A17           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D1_N  \
+    -pin_name F17           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D1_P  \
+    -pin_name G17           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D2_N  \
+    -pin_name B13           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D2_P  \
+    -pin_name B12           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D3_N  \
+    -pin_name A13           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D3_P  \
+    -pin_name A12           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D4_N  \
+    -pin_name F16           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D4_P  \
+    -pin_name F15           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D5_N  \
+    -pin_name D17           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D5_P  \
+    -pin_name D16           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D6_N  \
+    -pin_name B10           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D6_P  \
+    -pin_name B9            \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D7_N  \
+    -pin_name G15           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_D7_P  \
+    -pin_name H15           \
+    -fixed true             \
+    -io_std LVDS18G         \
+    -IN_DELAY 16            \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_DCLK_N  \
+    -pin_name E16             \
+    -fixed true               \
+    -io_std LVDS18G           \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_DCLK_P  \
+    -pin_name E15             \
+    -fixed true               \
+    -io_std LVDS18G           \
+    -DIRECTION INPUT
+
+
+set_io -port_name PHY_MDC  \
+    -pin_name R1           \
+    -fixed true            \
+    -io_std LVCMOS33       \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name PHY_MDIO  \
+    -pin_name T1            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION INOUT
+
+
+set_io -port_name PHY_RST  \
+    -pin_name N1           \
+    -fixed true            \
+    -io_std LVCMOS33       \
+    -DIRECTION OUTPUT
+
+set_io -port_name RGMII_RXC  \
+    -pin_name K3             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INPUT
+
+
+set_io -port_name RGMII_RX_CTL  \
+    -pin_name J3                \
+    -fixed true                 \
+    -io_std LVCMOS33            \
+    -DIRECTION INPUT
+
+
+set_io -port_name RGMII_TXC  \
+    -pin_name G2             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name RGMII_TX_CTL  \
+    -pin_name H2                \
+    -fixed true                 \
+    -io_std LVCMOS33            \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {RGMII_RXD[0]}  \
+    -pin_name L1                  \
+    -fixed true                   \
+    -io_std LVCMOS33              \
+    -DIRECTION INPUT
+
+
+set_io -port_name {RGMII_RXD[1]}  \
+    -pin_name K1                  \
+    -fixed true                   \
+    -io_std LVCMOS33              \
+    -DIRECTION INPUT
+
+
+set_io -port_name {RGMII_RXD[2]}  \
+    -pin_name J2                  \
+    -fixed true                   \
+    -io_std LVCMOS33              \
+    -DIRECTION INPUT
+
+
+set_io -port_name {RGMII_RXD[3]}  \
+    -pin_name L2                  \
+    -fixed true                   \
+    -io_std LVCMOS33              \
+    -DIRECTION INPUT
+
+
+set_io -port_name {RGMII_TXD[0]}  \
+    -pin_name J1                  \
+    -fixed true                   \
+    -io_std LVCMOS33              \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {RGMII_TXD[1]}  \
+    -pin_name H1                  \
+    -fixed true                   \
+    -io_std LVCMOS33              \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {RGMII_TXD[2]}  \
+    -pin_name F1                  \
+    -fixed true                   \
+    -io_std LVCMOS33              \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {RGMII_TXD[3]}  \
+    -pin_name F2                  \
+    -fixed true                   \
+    -io_std LVCMOS33              \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name SPI_CSN  \
+    -pin_name B7           \
+    -fixed true            \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name SPI_SCK  \
+    -pin_name C6           \
+    -fixed true            \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name SPI_SDI  \
+    -pin_name A5           \
+    -fixed true            \
+    -DIRECTION INPUT
+
+
+set_io -port_name SPI_SDO  \
+    -pin_name B4           \
+    -fixed true            \
+    -DIRECTION OUTPUT
+
+
+
